@@ -1,0 +1,23 @@
+# stop prompting that zsh is the default shell
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# terminal colors
+export CLICOLOR=1
+
+# dark background
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# terminal prefix
+PS1="[\u@MACHINE-NAME-HERE \W]$ "
+
+## aliases
+# misc
+alias ..="cd ../"
+alias ...="cd ../../"
+alias grep="grep --color=always"
+alias disk-hog="find . -type f -size +100M -exec ls -lah {} \; | sort -rnk 5"
+alias pwgen="openssl rand -base64 20"
+
+# docker
+#alias doc-bld="docker build --no-cache --platform linux/amd64"
+#alias doc-rmi="docker rmi $(docker images --filter "dangling=true" -q --no-trunc)"
